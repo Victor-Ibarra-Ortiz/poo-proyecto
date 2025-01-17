@@ -21,8 +21,8 @@ public class Car {
     public Car(String modelo, String marca, int numeroPuertas, String color){
         this.modelo = modelo;
         this.marca = marca;
-        this.numeroPuertas = numeroPuertas;
         this.color = color;
+        setNumeroPuertas(numeroPuertas);
     }
     /**
      * @param numeroPuertas Aqui se valida el número de puertas del carro creado
