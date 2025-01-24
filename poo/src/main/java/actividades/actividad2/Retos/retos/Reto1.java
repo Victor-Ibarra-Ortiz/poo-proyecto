@@ -19,7 +19,9 @@ public class Reto1 {
         System.out.println("Texto revertido: " + reversed);
         findFirstDuplicate(input);
     }
-
+/*
+ * reto 2
+ */
     public static void findFirstDuplicate(String text) {
         HashMap<Character, Integer> charIndexMap = new HashMap<>();
         
@@ -38,4 +40,8 @@ public class Reto1 {
 
         System.out.println("No hay caracteres duplicados en el texto.");
     }
+    /*
+     * Reto 3
+     */
+    
 }
