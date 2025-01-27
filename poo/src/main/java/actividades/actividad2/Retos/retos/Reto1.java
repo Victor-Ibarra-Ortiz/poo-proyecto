@@ -39,9 +39,24 @@ public class Reto1 {
         }
 
         System.out.println("No hay caracteres duplicados en el texto.");
-    }
+}
     /*
      * Reto 3
      */
     
+
+        public static void findMinValue(String[] args) {
+            int[] numbers = {10, 3, 5, 7, 2, 8};
+    
+            int mini = numbers[0];
+            for (int i = 1; i < numbers.length; i++) {
+                if (numbers[i] < mini) {
+                    mini = numbers[i];
+                }
+            }
+            System.out.println("Lista original: " + java.util.Arrays.toString(numbers));
+            System.out.println("El valor más pequeño es: " + mini);
+        }
 }
+    
+
