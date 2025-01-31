@@ -27,7 +27,7 @@ public class Calculadora {
 
         double precio1 = calcularPrecioTotal(producto1);
         double precio2 = calcularPrecioTotal(producto2);
-
+            //compara los precios de los productos*\
         if (precio1 > precio2) {
             return "El primer producto es más caro.";
         } else if (precio1 < precio2) {

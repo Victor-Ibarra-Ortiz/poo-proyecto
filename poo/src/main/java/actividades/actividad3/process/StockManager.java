@@ -10,7 +10,7 @@ public class StockManager {
     public StockManager() {
         this.stock = new ArrayList<>();
     }
-
+        //*impuesto de 16% */
     public void addProductos(String nombre, String descripcion, String codigo, String tipo, double precio) {
         double impuesto = precio * 0.16;
         Productos productos = new Productos(nombre, descripcion, codigo, tipo, precio, impuesto);

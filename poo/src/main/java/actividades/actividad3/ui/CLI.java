@@ -15,14 +15,14 @@ public class CLI {
         scanner = new Scanner(System.in);
         stockManager = new StockManager();
     }
-
+    //* corre el programa*\
     public void runApp() {
         while (true) {
             showMenu();
-            String choice = scanner.nextLine();
-            switch (choice) {
+            String opcion = scanner.nextLine();
+            switch (opcion) {
                 case "1":
-                    displayProductList();
+                    listaProductos();
                     break;
                 case "2":
                     addProduct();
@@ -42,7 +42,7 @@ public class CLI {
             }
         }
     }
-
+    //* muestra el menu*\
     private void showMenu() {
         System.out.println("\nMenú Principal:");
         System.out.println("1. Mostrar Stock");
@@ -53,7 +53,7 @@ public class CLI {
         System.out.print("Selecciona una opción: ");
     }
 
-    private void displayProductList() {
+    private void listaProductos() {
         List<Productos> stock = stockManager.getStock();
         if (stock.isEmpty()) {
             System.out.println("No hay productos.");
@@ -65,7 +65,7 @@ public class CLI {
                     ", Impuesto: " + productos.getImpuesto());
         }
     }
-
+    //* pide al usuario llenar las siguientes opciones para poder hacer su producto */
     private void addProduct() {
         try {
             System.out.print("Nombre del producto: ");
@@ -115,7 +115,7 @@ public class CLI {
             System.out.print("Ingresa el porcentaje de utilidad deseado: ");
             double profitMargin = Double.parseDouble(scanner.nextLine());
     
-            // Calculate the recommended precio with a 16% tax rate
+            // Calculla el precio con un impuesto del 16%*\
             double finalprecio = Calculadora.calcularPrecio(precio, profitMargin, 16);
             System.out.println("El precio final recomendado es: " + finalprecio);
         } catch (Exception e) {
